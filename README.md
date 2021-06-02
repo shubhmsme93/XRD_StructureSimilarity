@@ -5,6 +5,11 @@ This package provides following utilities:
 * cluster structures in different groups for a given alloy composition (e.g., Ta12C11N1) based on calculated XRDs
 * calculate thermodynamic properties based on statistical thermodynamics: paritition function, configurational free energy, thermodynamic density of states (TDOS)
 
+# Requirements
+* [Pylada](https://github.com/pylada/pylada-light)
+* numpy
+* pandas
+
 # Steps to follow to cluster structures based on XRD similarity:
 1. run `write_raw_xrd.py` to calculate raw XRDs for each structure. this is a python parallelized version and can be submitted as a single node SLURM job.
 2. run `xrd_scale.py` to scale pairs of structures and calculate their optimized XRD differences. optimzied XRD differences lie in a range [0,2]. 
